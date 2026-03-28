@@ -50,9 +50,9 @@ int main () {
             printf("----- Jogo empatado! -----\n");
         } 
         else if (
-            (escolhaComputador == 1) && (escolhaJogador == 2) || 
-            (escolhaComputador == 2) && (escolhaJogador == 3) ||
-            (escolhaComputador == 3) && (escolhaJogador == 1) )
+            (escolhaJogador == 1 && escolhaComputador == 3) || 
+            (escolhaJogador == 2 && escolhaComputador == 1) ||  
+            (escolhaJogador == 3 && escolhaComputador == 2) )  
         {
             printf("----- Jogador venceu! ---\n");
         }     
