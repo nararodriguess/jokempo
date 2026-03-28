@@ -15,6 +15,7 @@ int main () {
     scanf("%d", &escolhaJogador);
 
     escolhaComputador = rand() % 3 + 1;
+
     if (escolhaJogador == 1 || escolhaJogador == 2 || escolhaJogador == 3) {
         switch(escolhaJogador) {
         case 1:
@@ -42,26 +43,27 @@ int main () {
             printf("Computador: Tesoura\n");
             break;
         }
-    }
 
-    if ((escolhaJogador != 1) || (escolhaJogador != 2) || (escolhaJogador != 3)) 
-    {
-        printf("Insiva um valor válido para jogar.\n");
-    } 
-    else if  (escolhaComputador == escolhaJogador) 
-    {
-        printf("----- Jogo empatado! -----\n");
-    } 
-    else if (
-        (escolhaComputador == 1) && (escolhaJogador == 2) || 
-        (escolhaComputador == 2) && (escolhaJogador == 3) ||
-        (escolhaComputador == 3) && (escolhaJogador == 1) )
-    {
-        printf("----- Jogador venceu! ---\n");
-    }     
+
+        if (escolhaComputador == escolhaJogador) 
+        {
+            printf("----- Jogo empatado! -----\n");
+        } 
+        else if (
+            (escolhaComputador == 1) && (escolhaJogador == 2) || 
+            (escolhaComputador == 2) && (escolhaJogador == 3) ||
+            (escolhaComputador == 3) && (escolhaJogador == 1) )
+        {
+            printf("----- Jogador venceu! ---\n");
+        }     
+        else 
+        { 
+            printf("----- Computador venceu -----\n");
+        }
+    }
     else 
     { 
-        printf("----- Computador venceu -----\n");
+        printf("Insira um valor válido para jogar.\n");
     }
 
     return 0;
