@@ -31,19 +31,24 @@ int main () {
         break;
     }
 
-    switch(escolhaComputador) {
-    case 1:
-        printf("Computador: Pedra\n");
-        break;
-    case 2:
-        printf("Computador: Papel\n");
-        break;
-    case 3:
-        printf("Computador: Tesoura\n");
-        break;
+    if (escolhaJogador == 1 || escolhaJogador == 2 || escolhaJogador == 3) {
+        switch(escolhaComputador) {
+        case 1:
+            printf("Computador: Pedra\n");
+            break;
+        case 2:
+            printf("Computador: Papel\n");
+            break;
+        case 3:
+            printf("Computador: Tesoura\n");
+            break;
+        }
     }
 
-    if(escolhaComputador == escolhaJogador){
+    if (
+        (escolhaJogador != 1) || (escolhaJogador != 2) || (escolhaJogador != 3)) {
+        printf("Insiva um valor válido para jogar.\n");
+    } else if  (escolhaComputador == escolhaJogador) {
         printf("----- Jogo empatado! -----\n");
     } else if (
         (escolhaComputador == 1) && (escolhaJogador == 2) || 
@@ -51,11 +56,7 @@ int main () {
         (escolhaComputador == 3) && (escolhaJogador == 1) )
     {
         printf("----- Jogador venceu! ---\n");
-    } else if (
-        (escolhaJogador != 1) || (escolhaJogador != 2) || (escolhaJogador != 3)) {
-        printf("Insira um valor válido para jogar.\n");
-    }
-    
+    }     
     else { 
         printf("----- Computador venceu -----\n");
     }
