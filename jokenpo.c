@@ -45,13 +45,18 @@ int main () {
 
     if(escolhaComputador == escolhaJogador){
         printf("----- Jogo empatado! -----\n");
-    } else if 
+    } else if (
         (escolhaComputador == 1) && (escolhaJogador == 2) || 
         (escolhaComputador == 2) && (escolhaJogador == 3) ||
-        (escolhaComputador == 3) && (escolhaJogador == 1) 
+        (escolhaComputador == 3) && (escolhaJogador == 1) )
     {
         printf("----- Jogador venceu! ---\n");
-    } else { 
+    } else if (
+        (escolhaJogador != 1) || (escolhaJogador != 2) || (escolhaJogador != 3)) {
+        printf("Insira um valor válido para jogar.\n");
+    }
+    
+    else { 
         printf("----- Computador venceu -----\n");
     }
 
