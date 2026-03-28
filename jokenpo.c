@@ -14,9 +14,11 @@ int main () {
     printf("Escolha: \n");
     scanf("%d", &escolhaJogador);
 
-    escolhaComputador = rand() % 3 + 1;
+   
 
     if (escolhaJogador == 1 || escolhaJogador == 2 || escolhaJogador == 3) {
+        escolhaComputador = rand() % 3 + 1;
+        
         switch(escolhaJogador) {
         case 1:
             printf("Jogador: Pedra - ");
